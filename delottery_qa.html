@@ -26,10 +26,8 @@
       .content {
         padding-top: 1vh;padding-left: 20vw;padding-right: 20vw;padding-bottom: 10vh;width: 60vw;
       }
-      @media screen and (max-width: 800px) {
-        .content {
-          padding-top: 1vh;padding-left: 5vw;padding-right: 5vw;padding-bottom: 5vh;width: 90vw;
-        }
+      .header {
+        padding-top: 1vh;padding-left: 20vw;width: 60vw;font-size: 1.5vmax;font-family: 'Times New Roman', serif;font-weight: bold;color: #fff;text-align: center;
       }
       .title {
         font-family: 'Times New Roman', serif;color: #fff;font-size: 1.2vmax;margin-top: 2vh;font-weight: bold;
@@ -37,13 +35,27 @@
       .detail {
         font-size: 1.1vmax;color: #ffffffee;line-height: 1.5;
       }
+      @media screen and (max-width: 800px) {
+        .content {
+          padding-top: 1vh;padding-left: 5vw;padding-right: 5vw;padding-bottom: 5vh;width: 90vw;
+        }
+        .header {
+          padding-top: 1vh;padding-left: 20vw;width: 60vw;font-size: 2.5vmax;font-family: 'Times New Roman', serif;font-weight: bold;color: #fff;text-align: center;
+        }
+        .title {
+          font-family: 'Times New Roman', serif;color: #fff;font-size: 2.2vmax;margin-top: 2vh;font-weight: bold;
+        }
+        .detail {
+          font-size: 2.0vmax;color: #ffffffee;line-height: 1.5;
+        }
+      }
     </style>
   </head>
   <body onload="main()">
     <div class="top display-flex">
       <a href="./index.html"><img src="./assets/logo.png" style="display:block;width:auto;height:40px;margin-left:5vw;padding-top: 15px;"/></a>
     </div>
-    <div style="padding-top: 1vh;padding-left: 20vw;width: 60vw;font-size: 1.5vmax;font-family: 'Times New Roman', serif;font-weight: bold;color: #fff;text-align: center;">DeLottery Frequently Asked Questions</div>
+    <div class="header">DeLottery Frequently Asked Questions</div>
     <div class="content">
       <details>
         <summary class="title" style="margin-top: 3vh;">1. What is the winning prize of DeLottery ?</summary>
