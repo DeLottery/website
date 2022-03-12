@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="进入app按钮" transform="translate(-290.000000, -445.000000)">
+            <g id="telegram-fill" transform="translate(290.000000, 445.000000)">
+                <polygon id="Path" points="0 0 30 0 30 30 0 30"></polygon>
+                <path d="M15,27.5 C8.09625,27.5 2.5,21.90375 2.5,15 C2.5,8.09625 8.09625,2.5 15,2.5 C21.90375,2.5 27.5,8.09625 27.5,15 C27.5,21.90375 21.90375,27.5 15,27.5 Z M11.1125,16.4625 L11.12875,16.45375 L12.21625,20.04125 C12.35625,20.43 12.54875,20.5 12.7825,20.4675 C13.0175,20.43625 13.14125,20.31 13.295,20.1625 L14.78,18.7275 L17.9675,21.0875 C18.55,21.40875 18.96875,21.2425 19.11375,20.5475 L21.185,10.77 C21.41375,9.86 21.01375,9.495 20.3075,9.785 L8.14125,14.485 C7.31125,14.8175 7.31625,15.2825 7.99125,15.48875 L11.1125,16.46375 L11.1125,16.4625 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>
