@@ -64,7 +64,7 @@
           font-family: 'Times New Roman', serif;font-weight: bold;font-size:8vw;color:#FCD250;
         }
         .subtitle {
-          font-family: Georgia, serif;font-size:2vw;color:#FCD250;opacity: 0.75;
+          font-family: Georgia, serif;font-size:3vw;color:#FCD250;opacity: 0.75;
         }
         .info-text {
           font-family: 'Times New Roman', serif;
@@ -98,7 +98,7 @@
       }
       .border {
         font-family: 'Times New Roman', serif;
-        font-size:1.2vw;
+        font-size:1.2vmax;
         color:#f08CEC;
         border-style: solid;
         border-width: 1px;
@@ -115,7 +115,7 @@
         cursor: pointer;
         background-color: #f08CEC;
         font-family: 'Times New Roman', serif;
-        font-size:1.2vw;
+        font-size:1.2vmax;
         color: rgba(0, 0, 0, 1.0);
         border-style: solid;
         border-width: 1px;
@@ -131,7 +131,7 @@
       .input {
         background-color: #072a55;
         font-family: 'Times New Roman', serif;
-        font-size:1.2vw;
+        font-size:1.2vmax;
         color:#f08CEC;
         border-style: solid;
         border-width: 1px;

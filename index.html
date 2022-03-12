@@ -18,14 +18,14 @@
   </head>
   <body onload="main()">
     <div class="top display-flex">
-      <a href=""><img src="./assets/logo.png" style="display:block;width:auto;height:60%;margin-left:5vw;margin-top: 20%;"/></a>
+      <a href=""><img src="./assets/logo.png" style="display:block;width:auto;height:40px;margin-left:5vw;margin-top: 15px;"/></a>
     </div>
     <div class="left">
       <div class="left-content">
         <div class="main-title">
         DeLottery
         </div>
-        <div style="font-family: Georgia, serif;font-size:2vw;color:#FCD250">
+        <div style="font-family: Georgia, serif;font-size:2vmax;color:#FCD250">
         A fair and equitable auto-drawing lottery mechanism
         </div>
         <div style="width:90%;height:1px;background-color:#ffffff66;margin-top:20px;margin-bottom:20px;"></div>
@@ -37,8 +37,8 @@
           <a href="./delottery_qa.html" target="_blank"><img src="./assets/qa.png" style="display:block;width:auto;height:35px;opacity:0.8;margin-left:15px;" title="Q & A"/></a>
           <a href="#" target="_blank"><img src="./assets/dao.svg" style="display:block;width:auto;height:35px;opacity:0.8;margin-left:15px;" title="DeLottery Dao(planning)"/></a>
         </div>
-        <div style="font-family: 'Times New Roman', serif;font-size:1vw;color:#fff;opacity: 0.8;margin-top: 20px;">
-        <a href="https://bscscan.com/token/0x016a8cfd7ab8dd754e51622a2ed51fbad5b71f82" target="_blank" title="view on Bscscan"><span style="font-family: 'Times New Roman', serif;font-size:1vw;color:#fff;margin-top: 20px;text-decoration:underline">DL Contract Address (CA)</span></a>: 0x016a8CFd7AB8dD754E51622A2ed51fBAd5B71f82
+        <div style="font-family: 'Times New Roman', serif;font-size:1vmax;color:#fff;opacity: 0.8;margin-top: 20px;">
+        <a href="https://bscscan.com/token/0x016a8cfd7ab8dd754e51622a2ed51fbad5b71f82" target="_blank" title="view on Bscscan"><span style="font-family: 'Times New Roman', serif;font-size:1vmax;color:#fff;margin-top: 20px;text-decoration:underline">DL Contract Address (CA)</span></a>: 0x016a8CFd7AB8dD754E51622A2ed51fBAd5B71f82
         </div>
       </div>
     </div>
@@ -50,21 +50,21 @@
         <div id="jackpot_prize" class="jackpot-prize">
         Loading...
         </div>
-        <div id="jackpot_prize_usd" style="font-family: 'Times New Roman', serif;font-weight: bold;font-size:3vw;color:#FCD250;height: 3vw;"></div>
+        <div id="jackpot_prize_usd" style="font-family: 'Times New Roman', serif;font-weight: bold;font-size:3vmax;color:#FCD250;height: 3vmax;"></div>
         <div class="display-flex probability-ticket">
           <div style="width: 50%;">
             <div class="subtitle">
             Current Winning Probability
             </div>
-            <div id="win_odds" style="font-family: 'Times New Roman', serif;font-weight: bold;font-size:3vw;color:#FCD250">Loading...</div>
-            <div id="ticket_count" style="font-family: 'Times New Roman', serif;font-weight: bold;font-size:1.5vw;height: 1.5vw;color:#FCD250">&nbsp;</div>
+            <div id="win_odds" style="font-family: 'Times New Roman', serif;font-weight: bold;font-size:3vmax;color:#FCD250">Loading...</div>
+            <div id="ticket_count" style="font-family: 'Times New Roman', serif;font-weight: bold;font-size:1.5vmax;height: 1.5vmax;color:#FCD250">&nbsp;</div>
           </div>
           <div style="width: 50%;">
             <div class="subtitle">
             Current Ticket Price
             </div>
-            <div id="ticket_price" style="font-family: 'Times New Roman', serif;font-weight: bold;font-size:3vw;color:#FCD250">Loading...</div>
-            <div id="ticket_price_usd" style="font-family: 'Times New Roman', serif;font-weight: bold;font-size:1.5vw;height: 1.5vw;color:#FCD250">&nbsp;</div>
+            <div id="ticket_price" style="font-family: 'Times New Roman', serif;font-weight: bold;font-size:3vmax;color:#FCD250">Loading...</div>
+            <div id="ticket_price_usd" style="font-family: 'Times New Roman', serif;font-weight: bold;font-size:1.5vmax;height: 1.5vmax;color:#FCD250">&nbsp;</div>
           </div>
         </div>
         <div class="info-text get-ticket" style="color: #f08CEC;">
@@ -72,17 +72,17 @@
         </div>
         <input id="check_input" class="input" type="text" id="wallet-address" name="name" placeholder="Enter an address to check delottery tickets and winnings" required minlength="42" maxlength="42" size="45">
         <span id="check" class="border" style="margin-left: 10px;margin-top: 8px;">Check</span>
-        <i><div id="tickets" class="info-text" style="margin-top:10px;font-size: 1vw;color: #f08CEC;height: 1vw;margin-right: 6vw;"></div></i>
-        <div id="last_jackpot" class="info-text" style="margin-top:20px;padding-left:3vw;padding-right:3vw;font-size:1vw;height:1vw;opacity:0.8;"></div>
+        <i><div id="tickets" class="info-text" style="margin-top:10px;font-size: 1vmax;color: #f08CEC;height: 1vw;margin-right: 6vw;"></div></i>
+        <div id="last_jackpot" class="info-text" style="margin-top:20px;padding-left:3vw;padding-right:3vw;font-size:1vmax;height:1vw;opacity:0.8;"></div>
       </div>
     </div>
     <div id="toast"></div>
     <div id="winner-toast" class="shadow winner">
       <div style="margin: 10px;padding-top: 20px;padding-bottom: 20px; background-color: #019267;color: #FCD250;font-family: 'Times New Roman', serif;text-align: center;">
-        <i><div style="font-size: 0.8vw;font-weight: bold;">——————— DELOTTERY ———————</div></i>
+        <i><div style="font-size: 0.8vmax;font-weight: bold;">——————— DELOTTERY ———————</div></i>
         <div class="toast-winner">✭ JACKPOT WINNER ✭</div>
-        <i><div id="winner-toast-winner" style="font-size: 1.5vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;"></div></i>
-        <i><div id="winner-toast-prize" style="font-size: 1.5vw;"></div></i>
+        <i><div id="winner-toast-winner" style="font-size: 1.5vmax;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;"></div></i>
+        <i><div id="winner-toast-prize" style="font-size: 1.5vmax;"></div></i>
       </div>
     </div>
     <div id="firework_canvas" style="position:fixed; top:0px; left:0px; margin:0px; width:100vw; height:100vh;pointer-events: none;"></div>
