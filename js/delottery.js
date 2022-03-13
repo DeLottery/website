@@ -222,7 +222,7 @@
                 }
               });
             } else {
-                document.querySelector('#last_jackpot').innerHTML = 'The last drawing skipped to the next round. Last prize: ' + numberWithCommas(result) + ' DL';
+                document.querySelector('#last_jackpot').innerHTML = 'The last drawing skipped to the current round. Last prize: ' + numberWithCommas(result) + ' DL';
                 if (winnerPopShow == 1) {
                   winnerPopShow = 2;
                   showWinner(false, 'The drawing skips to the next round with a bigger jackpot', result);
