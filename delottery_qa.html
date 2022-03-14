@@ -47,7 +47,7 @@
       }
     </style>
   </head>
-  <body>
+  <body onload="main">
     <div class="top display-flex">
       <a href="./index.html"><img src="./assets/logo.png" style="display:block;width:auto;height:40px;margin-left:5vw;padding-top: 20px;"/></a>
     </div>
@@ -78,33 +78,42 @@
         <ol><div class="detail"> 12 for buy and sell to avoid price fluctuation. </div></ol>
       </details>
       <details>
-        <summary class="title" style="margin-top: 3vh;">7. Which token should I buy with ?</summary>
+        <summary class="title" style="margin-top: 3vh;">7. Why can’t I sell my DL token ?</summary>
+        <ol><div class="detail"> Try to specify the amount of DL token instead of the amount of out token, and for jackpot winners, there is a 24-hour liner lock  to transfer or sell the prize DL tokens so as to delay the sell pressure. </div></ol>
+      </details>
+      <details>
+        <summary class="title" style="margin-top: 3vh;">8. Which token should I buy with ?</summary>
         <ol><div class="detail"> The liquidity pair is DL-USDC, so it’s recommended to buy with USDC, but you can also buy with other tokens. </div></ol>
       </details>
       <details>
-        <summary class="title" style="margin-top: 3vh;">8. If the drawing skips to the next round, is my ticket still valid for it ?</summary>
+        <summary class="title" style="margin-top: 3vh;">9. If the drawing skips to the next round, is my ticket still valid for it ?</summary>
         <ol><div class="detail"> Yes, your ticket is valid until a successful drawing. </div></ol>
       </details>
       <details>
-        <summary class="title" style="margin-top: 3vh;">9. How to check whether I have a ticket or my ticket numbers ?</summary>
+        <summary class="title" style="margin-top: 3vh;">10. How to check whether I have a ticket or my ticket numbers ?</summary>
         <ol><div class="detail"> You can check your address's ticket numbers on the official website <a href="https://de-lottery.eth.limo" target="_blank" class="detail">https://de-lottery.eth.limo</a> or by sending your address to DeLottery telegram group <a href="https://t.me/DeLotteryGroup" target="_blank" class="detail">https://t.me/DeLotteryGroup</a>, you can also directly call checkAddressTicket function to the contract with web3. </div></ol>
       </details>
       <details>
-        <summary class="title" style="margin-top: 3vh;">10. Do I need to hold a minimum amount of DL to win the prize ?</summary>
+        <summary class="title" style="margin-top: 3vh;">11. Do I need to hold a minimum amount of DL to win the prize ?</summary>
         <ol><div class="detail"> No, you can win the prize if you have a ticket even you're holding no DL. </div></ol>
       </details>
       <details>
-        <summary class="title" style="margin-top: 3vh;">11. When is the drawing and how to know if I win a prize ?</summary>
+        <summary class="title" style="margin-top: 3vh;">12. When is the drawing and how to know if I win a prize ?</summary>
         <ol><div class="detail"> DeLottery is automatically drawn at about 14:00 UTC everyday, and the result will be recorded in the contract's properties. You can check the winners on the official website <a href="https://de-lottery.eth.limo" target="_blank" class="detail">https://de-lottery.eth.limo</a> or in DeLottery telegram channel <a href="https://t.me/DeLottery" target="_blank" class="detail">https://t.me/DeLottery</a>, you can also directly read it from the blockchain. </div></ol>
       </details>
       <details>
-        <summary class="title" style="margin-top: 3vh;">12. How does DeLottery ensure randomness ?</summary>
+        <summary class="title" style="margin-top: 3vh;">13. How does DeLottery ensure randomness ?</summary>
         <ol><div class="detail"> DeLottery depends on the Chainlink VRF (Verifiable Random Function) to ensure randomness. Read more details about it in the <a href="./DeLotteryWhitepaper.pdf" target="_blank" class="detail">whitepaper</a>.</div></ol>
-      </details>
-      <details>
-        <summary class="title" style="margin-top: 3vh;">13. Why can’t I sell prize DL tokens ?</summary>
-        <ol><div class="detail"> There is a 24-hour liner lock for the jackpot winner to transfer or sell the prize DL tokens to delay the sell pressure. </div></ol>
       </details>
     </div>
   </body>
+  <script>
+    function main () {
+      window.addEventListener("resize", resetHeight);
+      resetHeight();
+    }
+    function resetHeight() {
+      document.body.style.height = window.innerHeight + "px";
+    }
+  </script>
 </html>

@@ -37,6 +37,13 @@
         });
 
         startRPC();
+
+        window.addEventListener("resize", resetHeight);
+        resetHeight();
+      }
+
+      function resetHeight() {
+        document.body.style.height = window.innerHeight + "px";
       }
 
       async function startRPC() {
@@ -191,7 +198,7 @@
                 result2 = result3;
               }
               document.querySelector('#ticket_count').innerHTML = result2 + ' Tickets';
-              let result = (Math.round(result2 * (result1 / 1000 + 1))).toFixed(0);
+              let result = (Math.floor(result2 * (1000 / (1000 - result1)))).toFixed(0);
               document.querySelector('#win_odds').innerHTML = '1 / ' + numberWithCommas(result);
             });
           });
