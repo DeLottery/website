@@ -145,8 +145,8 @@
         			} else {
         				winnerPopShow = 0;
         			}
-					now.setUTCHours(now.getUTCHours() + 23);
-					var day = now.getUTCDate();
+					    now.setUTCHours(now.getUTCHours() + 23);
+					    var day = now.getUTCDate();
         			if (day < 10) {
 		  				day = '0' + day;
         			}
@@ -156,8 +156,9 @@
         			}
         			document.querySelector('#jackpot_title').innerHTML = 'Current Jackpot Prize for 14:00 UTC ' + day + '-' + month + '-' + now.getUTCFullYear() + ' Drawing';
         		} else {
+              winnerPopShow = 0;
         			now = new Date();
-					var day = now.getUTCDate();
+					    var day = now.getUTCDate();
         			if (day < 10) {
 		  				day = '0' + day;
         			}
