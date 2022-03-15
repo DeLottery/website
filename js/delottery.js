@@ -205,9 +205,8 @@
               if (result3 > result2) {
                 result2 = result3;
               }
-              document.querySelector('#ticket_count').innerHTML = result2 + ' Tickets';
-              let result = (Math.floor(result2 * (1000 / (1000 - result1)))).toFixed(0);
-              document.querySelector('#win_odds').innerHTML = '1 / ' + numberWithCommas(result);
+              document.querySelector('#ticket_count').innerHTML = '10% Luckydog';
+              document.querySelector('#win_odds').innerHTML = '1 / ' + numberWithCommas(result2);
             });
           });
         });
