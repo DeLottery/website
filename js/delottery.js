@@ -36,6 +36,12 @@
           checkAddress();
         });
 
+        let airdrop = document.getElementById('airdrop');
+        airdrop.addEventListener('click', function () {
+          let url = 'https://docs.google.com/forms/d/1x5LD_h2rCJnyC7TQ5J1PqAdnrng7s0XR9VzYvHanOUQ/edit';
+          window.open(url, '_blank').focus();
+        });
+
         startRPC();
 
         window.addEventListener("resize", resetHeight);
