@@ -219,5 +219,11 @@
       .shadow {
         box-shadow: 5px 5px 10px #00000066
       }
+      .blink {
+        animation: blinker 2s linear infinite;
+      }
+      @keyframes blinker {  
+        50% { opacity: 0.6; }
+      }
 
 

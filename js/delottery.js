@@ -157,6 +157,8 @@
             if (month < 10) {
                 month = '0' + month;
             }
+            document.getElementById("jackpot_prize").classList.add("blink");
+            document.getElementById("jackpot_prize_usd").classList.add("blink");
             document.querySelector('#jackpot_title').innerHTML = 'Current Jackpot Prize for 14:00 UTC ' + day + '-' + month + '-' + now.getUTCFullYear() + ' is Drawing';
           } else {
             now = new Date();
@@ -178,6 +180,8 @@
         		if (month < 10) {
          				month = '0' + month;
         		}
+            document.getElementById("jackpot_prize").classList.remove("blink");
+            document.getElementById("jackpot_prize_usd").classList.remove("blink");
         		document.querySelector('#jackpot_title').innerHTML = 'Current Jackpot Prize for 14:00 UTC ' + day + '-' + month + '-' + now.getUTCFullYear() + ' Drawing';
         	}		
         });
