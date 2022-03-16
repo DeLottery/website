@@ -137,58 +137,51 @@
 
       function live() {        
         var now = new Date();
-        if (now.getUTCHours() >= 0) {
-        	getLastDrawTime().then(function(result) {
-        		now.setUTCHours(14);
-        		now.setUTCMinutes(0);
-        		now.setUTCSeconds(0);
-        		if (result >= Math.round(now.getTime()/ 1000)) {
-        			now = new Date();
-        			if (Math.round(now.getTime()/ 1000) - result < 85000) {
-        				if (winnerPopShow == 0) {
-        					winnerPopShow = 1;
-        				}
-        			} else {
-        				winnerPopShow = 0;
+        getLastDrawTime().then(function(result) {
+          var isDrawing = false;
+          if (now.getUTCHours() >= 14) {
+            now.setUTCHours(14);
+            now.setUTCMinutes(0);
+            now.setUTCSeconds(0);
+            if (result < Math.round(now.getTime()/ 1000)) {
+              isDrawing = true;
+            }
+          }
+          if (isDrawing) {
+            now = new Date();
+            var day = now.getUTCDate();
+            if (day < 10) {
+            day = '0' + day;
+            }
+            var month = now.getUTCMonth() + 1;
+            if (month < 10) {
+                month = '0' + month;
+            }
+            document.querySelector('#jackpot_title').innerHTML = 'Current Jackpot Prize for 14:00 UTC ' + day + '-' + month + '-' + now.getUTCFullYear() + ' is Drawing';
+          } else {
+            now = new Date();
+        		if (Math.round(now.getTime()/ 1000) - result < 85000) {
+        			if (winnerPopShow == 0) {
+        				winnerPopShow = 1;
         			}
-              if (now.getUTCHours() >= 14) {
-                now.setUTCHours(now.getUTCHours() + 23);
-              }
-					    var day = now.getUTCDate();
-        			if (day < 10) {
-		  				day = '0' + day;
-        			}
-        			var month = now.getUTCMonth() + 1;
-        			if (month < 10) {
-          				month = '0' + month;
-        			}
-        			document.querySelector('#jackpot_title').innerHTML = 'Current Jackpot Prize for 14:00 UTC ' + day + '-' + month + '-' + now.getUTCFullYear() + ' Drawing';
         		} else {
-        			now = new Date();
-					    var day = now.getUTCDate();
-        			if (day < 10) {
-		  				day = '0' + day;
-        			}
-        			var month = now.getUTCMonth() + 1;
-        			if (month < 10) {
-          				month = '0' + month;
-        			}
-        			document.querySelector('#jackpot_title').innerHTML = 'Current Jackpot Prize for 14:00 UTC ' + day + '-' + month + '-' + now.getUTCFullYear() + ' is Drawing';
+        			winnerPopShow = 0;
         		}
-        	});
-        } else {
-          winnerPopShow = 0;
-        	var day = now.getUTCDate();
-        	if (day < 10) {
-		  		day = '0' + day;
-        	}
-        	var month = now.getUTCMonth() + 1;
-        	if (month < 10) {
-          		month = '0' + month;
-        	}
-        	document.querySelector('#jackpot_title').innerHTML = 'Current Jackpot Prize for 14:00 UTC ' + day + '-' + month + '-' + now.getUTCFullYear() + ' Drawing';
-        }
-        
+            if (now.getUTCHours() >= 14) {
+              now.setUTCHours(now.getUTCHours() + 23);
+            }
+				    var day = now.getUTCDate();
+        		if (day < 10) {
+		  			day = '0' + day;
+        		}
+        		var month = now.getUTCMonth() + 1;
+        		if (month < 10) {
+         				month = '0' + month;
+        		}
+        		document.querySelector('#jackpot_title').innerHTML = 'Current Jackpot Prize for 14:00 UTC ' + day + '-' + month + '-' + now.getUTCFullYear() + ' Drawing';
+        	}		
+        });
+
         getBalanceOf(dlcontractAddress).then(function(result) {
           let newJackpot = Math.round(result / 10 ** 18 * 70);
           animateValue(lastJackpot, newJackpot, 1000);
