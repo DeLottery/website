@@ -1,2 +1,2 @@
 # website
-DeLottery website
+DeLottery official website
